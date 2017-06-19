@@ -1,0 +1,21 @@
+﻿.test {
+    margin-bottom: 10px;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+.test_link {
+    background-color: transparent;
+    border-bottom: 0;
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 0 4px 0 28px;
+    display: block;
+    cursor: pointer;
+    color: #1d2129;
+    background-color: #f6f7f9;
+    border: 1px solid #dddfe2;
+}
+.test_ul {
+    padding-right: 40px;
+}

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatataSocial", "BatataSocial\BatataSocial.csproj", "{90DB78C3-0C7F-4245-AA77-5CFA68E8C768}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF0F5418-7090-425E-907A-5E5D3ADA9261} = {CF0F5418-7090-425E-907A-5E5D3ADA9261}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatataSocial.API", "BatataSocial.API\BatataSocial.API.csproj", "{CF0F5418-7090-425E-907A-5E5D3ADA9261}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatataSocial.Data", "BatataSocial.Data\BatataSocial.Data.csproj", "{F778795A-2D6A-4007-828A-880841F18C2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90DB78C3-0C7F-4245-AA77-5CFA68E8C768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90DB78C3-0C7F-4245-AA77-5CFA68E8C768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90DB78C3-0C7F-4245-AA77-5CFA68E8C768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90DB78C3-0C7F-4245-AA77-5CFA68E8C768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF0F5418-7090-425E-907A-5E5D3ADA9261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF0F5418-7090-425E-907A-5E5D3ADA9261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF0F5418-7090-425E-907A-5E5D3ADA9261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF0F5418-7090-425E-907A-5E5D3ADA9261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F778795A-2D6A-4007-828A-880841F18C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F778795A-2D6A-4007-828A-880841F18C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F778795A-2D6A-4007-828A-880841F18C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F778795A-2D6A-4007-828A-880841F18C2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

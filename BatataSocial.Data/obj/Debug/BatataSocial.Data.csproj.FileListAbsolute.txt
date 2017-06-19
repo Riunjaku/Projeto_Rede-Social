@@ -1,0 +1,4 @@
+C:\VSO\BatataSocial\BatataSocial.Data\bin\Debug\BatataSocial.Data.dll
+C:\VSO\BatataSocial\BatataSocial.Data\bin\Debug\BatataSocial.Data.pdb
+C:\VSO\BatataSocial\BatataSocial.Data\obj\Debug\BatataSocial.Data.dll
+C:\VSO\BatataSocial\BatataSocial.Data\obj\Debug\BatataSocial.Data.pdb

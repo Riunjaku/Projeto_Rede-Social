@@ -1,0 +1,15 @@
+﻿@model BatataSocial.Models.ScrapViewModel
+<div>
+    <div class="col-xs-9">
+        <div class="row">
+            @Html.Partial("~/Views/Scrap/Create.cshtml", Model.Scrap)
+        </div>
+        <div class="row partialContents" data-url="/Scrap/ScrapList">
+            <h3>Loading.....</h3>
+        </div>
+    </div>
+    <div class="col-xs-3">
+        @Html.Partial("~/Views/Friend/Friend.cshtml")
+    </div>
+</div>
+

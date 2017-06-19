@@ -1,0 +1,60 @@
+﻿@using BatataSocial.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Logar";
+}
+
+
+<div class="row">
+    <div class="col-xs-6 col-md-offset-4">
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+            @Html.AntiForgeryToken()
+            <h4>Use uma conta valida para logar</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.User, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-offset-1 col-xs-10">
+                        @Html.TextBoxFor(m => m.User, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.User, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-offset-1 col-xs-10">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-xs-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe)
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-1 col-xs-10">
+                        <input type="submit" value="Logar" class="btn btn-info btn-block" />
+                    </div>
+                </div>
+                    <ul class="test_ul col-xs-10" >
+                        <li class="test" style="padding-bottom:20px;">
+                            <a class="test_link"  style="border:none; background-color:transparent;" href='@Url.Action("Index", "Home")'>Registrar como novo usuario</a>
+                        </li>
+                        <li class="test">
+                            <a class="test_link"  style="border:none; background-color:transparent;" href='@Url.Action("ForgotPassword")'>Esqueceu sua senha?</a>
+                        </li>
+                    </ul>
+
+                    
+                
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

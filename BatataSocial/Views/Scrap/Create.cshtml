@@ -1,0 +1,40 @@
+﻿@model BatataSocial.Models.ScrapViewModel
+
+@using (Html.BeginForm("Create", "Scrap", FormMethod.Post, new { role = "form", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Scrap, htmlAttributes: new { @class = "sr-only" })
+            <div class="col-xs-10 col-md-offset-1">
+                @Html.TextAreaFor(model => model.Scrap, new
+           {
+               @class = "form-control",
+               placeholder = "Em que voce esta pensando ?",
+               @style = "resize:none; max-width:none;",
+               @rows = "5",
+               @cols = "100%"
+           })
+
+                @Html.ValidationMessageFor(model => model.Scrap, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="Photo">Imagem</label>
+            <div class="col-xs-10 col-md-offset-1">
+                <input class="form-control" type="file" name="photo" style="max-width:none;" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-1 col-xs-10" >
+                <input type="submit" value="Postar" class="btn btn-success btn-block" style="max-width:none;"/>
+            </div>
+        </div>
+    </div>
+}

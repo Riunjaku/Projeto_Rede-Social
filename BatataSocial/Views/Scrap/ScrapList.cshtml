@@ -1,0 +1,42 @@
+﻿@model IEnumerable<BatataSocial.Models.ScrapViewModel>
+
+
+
+
+@Html.AntiForgeryToken()
+
+@foreach (var item in Model)
+{
+    
+    <div class="col-xs-10 col-md-offset-1 thumbnail">
+        <div style="margin-bottom: 10px;">
+
+            <div class=" col-sm-12 col-md-12" style="padding-top:40px;">
+                <p>Usuario : @Html.DisplayFor(modelItem => item.UserName) </p>
+
+            </div>
+            <br />
+            @if (item.Image != null)
+                {
+                <div class="image col-sm-3 col-md-3">
+                    <p>Imagem:</p>
+                    <img src="@Html.DisplayFor(modelItem => item.Image)" width="30%" height="30%" alt="...">
+                </div>
+
+            }
+
+            <div class="caption">
+                <p>Conteudo:</p>
+                <p>@Html.DisplayFor(modelItem => item.Scrap)</p>
+                <p><a href="#" class="btn btn-primary" role="button">Like</a> <a href="#" class="btn btn-default" role="button">Denunciar</a></p>
+                <!--if (Session["idUsuario"].ToString() != item.IdUser)
+                {
+                    Html.ActionLink("Deletar", "Delete", "Postagem", new { id = item.Id }, IsPost)
+
+                }-->
+            </div>
+        </div>
+    </div>
+
+
+}

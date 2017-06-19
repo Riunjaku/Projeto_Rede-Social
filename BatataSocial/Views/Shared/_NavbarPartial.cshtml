@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+<ul class="nav navbar-nav">
+    <li>
+        <a class="navbar-brand" href="@Url.Action("Index", "Principal")"><i class="glyphicon glyphicon-home"></i> Pagina inicial</a>
+    </li>
+</ul>
+}else
+{
+
+}

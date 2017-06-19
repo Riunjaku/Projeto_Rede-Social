@@ -1,0 +1,16 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    @Html.Action("Index", "Principal")
+}
+else
+{
+    <div class="row">
+        <div class="col-xs-6">
+            <img class="img-responsive" src="~/Images/BataLee.png" />
+        </div>
+        <div class="col-xs-6">
+            @Html.Partial("_RegisterPartial")
+        </div>
+    </div>
+}

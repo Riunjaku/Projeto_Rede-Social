@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+<div style="padding-top: 12px; width: 100%; top: 0px; ">
+
+    <div>
+        <div>
+            <ul class="test_ul">
+                <li class="test">
+                    <img class="img-responsive test_link" width="100%" height="35" src="/Images/BatataSocialIcone.png">
+                    <h3>
+                        @Html.DisplayName(User.Identity.Name)
+                    </h3>
+                </li>
+            </ul>
+        </div>
+        <ul class="test_ul">
+            <li class="test">
+                <a class="test_link" href='@Url.Action("Perfil", "Perfil")'>Perfil</a>
+            </li>
+            <li class="test">
+                <a class="test_link" href='@Url.Action("ChangePassword", "Manage")'>Trocar senha</a>
+            </li>
+        </ul>
+    </div>
+</div>
+}
+else
+{
+    <ul class="nav hidden-xs" id="lg-menu">
+        <li class="active"><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Em Desenvolvimento</a></li>
+    </ul>
+}
+
+
+
